@@ -13,6 +13,9 @@ go build src/main/main.go
 ./main
 ```
 
+## Librarys:
+
+* [fmt](https://golang.org/pkg/fmt/)
 
 ## Links:
 * [元ネタ様](https://qiita.com/RyotaNakaya/items/1c160932c21d69db5786)
