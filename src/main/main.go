@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"strings"
 	"math/rand"
+	"time"
 )
 
 func main()  {
@@ -14,11 +15,8 @@ func main()  {
 	fmt.Printf("フン。%sというのかい。贅沢な名だねェ。\n", name)
 
 	nameArray := strings.Split(name, "")
-	// fmt.Println(nameArray, len(nameArray))
 
-	var r int = rand.Intn(len(nameArray))
-	// fmt.Println(r)
-
-	newname := nameArray[r]
+	rand.Seed( time.Now().UnixNano() )
+	newname := nameArray[ rand.Intn(len(nameArray)) ]
 	fmt.Printf("今からお前の名前は%sだ。いいかい、%s。わかったら返事をするんだ、%s!!\n", newname, newname, newname)
 }
