@@ -10,11 +10,16 @@ import (
 )
 
 func main()  {
-	fmt.Println("契約書だよ。そこに名前を書きな。")
+	var name string
 
-	stdin := bufio.NewScanner(os.Stdin)
-	stdin.Scan()
-	name := stdin.Text()
+	for len(strings.TrimSpace(name)) == 0 {
+		fmt.Println("契約書だよ。そこに名前を書きな。")
+
+		stdin := bufio.NewScanner(os.Stdin)
+		stdin.Scan()
+		name = stdin.Text()
+	}
+
 	fmt.Printf("フン。%sというのかい。贅沢な名だねェ。\n", name)
 
 	nameArray := strings.Split(name, "")
